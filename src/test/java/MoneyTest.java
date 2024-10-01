@@ -22,16 +22,18 @@ public class MoneyTest {
 
   @Test
   public void testEquality() {
-    Dollar five = new Dollar(5);
-    Dollar anotherFive = new Dollar(5);
+    Dollar fiveDollar = new Dollar(5);
+    Dollar anotherFiveDollar = new Dollar(5);
 
-    assertTrue(five.equals(anotherFive));
-    assertFalse(five.equals(new Dollar(10)));
+    assertTrue(fiveDollar.equals(anotherFiveDollar));
+    assertFalse(fiveDollar.equals(new Dollar(10)));
 
-    Franc ten = new Franc(10);
-    Franc anotherTen = new Franc(10);
+    Franc fiveFranc = new Franc(5);
+    Franc anotherFiveFranc = new Franc(5);
 
-    assertTrue(ten.equals(anotherTen));
-    assertFalse(ten.equals(new Franc(15)));
+    assertTrue(fiveFranc.equals(anotherFiveFranc));
+    assertFalse(fiveFranc.equals(new Franc(15)));
+
+    assertFalse(fiveFranc.equals(fiveDollar));
   }
 }
